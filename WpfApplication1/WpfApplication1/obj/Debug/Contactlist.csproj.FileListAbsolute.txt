@@ -35,3 +35,6 @@ D:\Kursovik\WpfApplication1\WpfApplication1\bin\Debug\GalaSoft.MvvmLight.Platfor
 D:\Kursovik\WpfApplication1\WpfApplication1\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
 D:\Kursovik\WpfApplication1\WpfApplication1\bin\Debug\Microsoft.Practices.ServiceLocation.xml
 D:\Kursovik\WpfApplication1\WpfApplication1\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\Kursovik\WpfApplication1\WpfApplication1\obj\Debug\Resources\Icons.baml
+D:\Kursovik\WpfApplication1\WpfApplication1\obj\Debug\Resources\Icons.g.cs
+D:\Kursovik\WpfApplication1\WpfApplication1\obj\Debug\Styles\ButtonStyle1.baml

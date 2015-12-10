@@ -3,21 +3,39 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:local="clr-namespace:WpfApplication1"
-        Title="ContactList" Height="500" Width="350"
-                      x:Name="MyMetroWindow">
+        xmlns:metrocontrols="http://metro.mahapps.com/winfx/xaml/controls"
+        mc:Ignorable="d"                  
+        Title="ContactList" Height="500" Width="350" Background="Black"
+        x:Name="MyMetroWindow"
+        DataContext="{Binding Source={StaticResource Locator}, Path=Main}">
+    <Controls:MetroWindow.Resources>
+    <ResourceDictionary>
+        <ResourceDictionary.MergedDictionaries>
+            <ResourceDictionary Source="/Templates/ButtonTemplates.xaml" />
+        </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+    </Controls:MetroWindow.Resources>
+
     <Grid HorizontalAlignment="Left" Width="340" RenderTransformOrigin="0.521,0.19" Background="Black">
         <Grid.RowDefinitions>
             <RowDefinition Height="40*"></RowDefinition>
             <RowDefinition Height="208*"></RowDefinition>
         </Grid.RowDefinitions>
-        <Button Content ="Create" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Height="75" Width="85" FontSize="12" FontWeight="ExtraBold"
-                Background="Yellow" Grid.RowSpan="2" Foreground="Black"/>
-        <Button Content ="AddNumber" HorizontalAlignment="Left" Margin="85,0,0,0" VerticalAlignment="Top" Height="75" Width="85" FontSize="12" FontWeight="ExtraBold"
-                Background="Yellow" Grid.RowSpan="2" Foreground="Black" Padding="0"/>
-        <Button Content ="Delete" HorizontalAlignment="Left" Margin="170,0,0,0" VerticalAlignment="Top" Height="75" Width="85" FontSize="12" FontWeight="ExtraBold"
-                Background="Yellow" Grid.RowSpan="2" Foreground="Black"/>
-        <Button Content ="Call" HorizontalAlignment="Left" Margin="255,0,0,0" VerticalAlignment="Top" Height="75" Width="85" FontSize="12" FontWeight="ExtraBold"
-                Background="Yellow" Grid.RowSpan="2" Foreground="Black"/>
-        <ListBox HorizontalAlignment="Left" Height="373" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="320" Background="#FF919191" Foreground="Black"/>
+        <StackPanel Orientation="Horizontal">
+            <Button Content ="Create" Style="{StaticResource MainWindowButtons }"
+                    Command="{Binding OpenCreating}"
+                    CommandParameter="{Binding ElementName=MyMetroWindow}"/>
+            <Button Content ="Delete"  Height="75" Width="85" FontSize="12" FontWeight="ExtraBold"
+            	Background="Yellow" BorderBrush="Black" Foreground="Black" RenderTransformOrigin="0.506,0.48"/>
+            <Button Content ="AddNumber" Height="75" Width="85" FontSize="12" FontWeight="ExtraBold"
+        		Background="Yellow" BorderBrush="Black" Foreground="Black" Padding="0" IsDefault="True"/>
+            <Button Content ="Call" VerticalAlignment="Top" Height="75" Width="85" FontSize="12" FontWeight="ExtraBold"
+            	Background="Yellow" BorderBrush="Black" Foreground="Black" />
+        </StackPanel>
+        <ListBox Grid.Row="1" Background="Black">
+            <ListBoxItem Background="Red">ListBox Item #1</ListBoxItem>
+            <ListBoxItem Background="Red">ListBox Item #2</ListBoxItem>
+            <ListBoxItem Background="Red">ListBox Item #3</ListBoxItem>
+        </ListBox>
     </Grid>
 </Controls:MetroWindow>
