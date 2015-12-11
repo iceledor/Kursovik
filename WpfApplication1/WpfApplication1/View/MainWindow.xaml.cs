@@ -14,7 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using MahApps.Metro.Controls;
 
-namespace WpfApplication1
+namespace WpfApplication1.View
 {
     /// <summary>
     /// Логика взаимодействия для MainWindow.xaml

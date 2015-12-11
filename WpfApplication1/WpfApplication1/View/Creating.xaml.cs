@@ -20,9 +20,21 @@ namespace WpfApplication1.View
     /// </summary>
     public partial class Creating : MetroWindow
     {
+        public static Creating Instance;
         public Creating()
         {
             InitializeComponent();
+            Instance = this;
+        }
+
+        private void MetroWindow_Closed(object sender, EventArgs e)
+        {
+            Instance = null;
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }

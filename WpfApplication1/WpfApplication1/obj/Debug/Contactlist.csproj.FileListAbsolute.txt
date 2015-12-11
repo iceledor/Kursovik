@@ -38,3 +38,6 @@ D:\Kursovik\WpfApplication1\WpfApplication1\obj\Debug\GeneratedInternalTypeHelpe
 D:\Kursovik\WpfApplication1\WpfApplication1\obj\Debug\Resources\Icons.baml
 D:\Kursovik\WpfApplication1\WpfApplication1\obj\Debug\Resources\Icons.g.cs
 D:\Kursovik\WpfApplication1\WpfApplication1\obj\Debug\Styles\ButtonStyle1.baml
+D:\Kursovik\WpfApplication1\WpfApplication1\obj\Debug\Styles\ButtonStyle2.baml
+D:\Kursovik\WpfApplication1\WpfApplication1\obj\Debug\Styles\TextblockStyle1.baml
+D:\Kursovik\WpfApplication1\WpfApplication1\obj\Debug\Styles\TextboxStyle1.baml

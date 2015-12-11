@@ -15,6 +15,7 @@
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Ioc;
 using Microsoft.Practices.ServiceLocation;
+using WpfApplication1.Model;
 
 namespace WpfApplication1.ViewModel
 {
@@ -24,35 +25,31 @@ namespace WpfApplication1.ViewModel
     /// </summary>
     public class ViewModelLocator
     {
-        /// <summary>
-        /// Initializes a new instance of the ViewModelLocator class.
-        /// </summary>
+        private IContactsRepository _contactRepository;
+        private IContactsService _contactsService;
+
         public ViewModelLocator()
         {
-            ServiceLocator.SetLocatorProvider(() => SimpleIoc.Default);
-
-            ////if (ViewModelBase.IsInDesignModeStatic)
-            ////{
-            ////    // Create design time view services and models
-            ////    SimpleIoc.Default.Register<IDataService, DesignDataService>();
-            ////}
-            ////else
-            ////{
-            ////    // Create run time view services and models
-            ////    SimpleIoc.Default.Register<IDataService, DataService>();
-            ////}
-
-            SimpleIoc.Default.Register<MainViewModel>();
+            _contactRepository = new WpfApplication1.ContactsRepository();
+            _contactsService = new ContactsService(_contactRepository);
         }
 
         public MainViewModel Main
         {
             get
             {
-                return ServiceLocator.Current.GetInstance<MainViewModel>();
+                return new MainViewModel(_contactsService);
             }
         }
-        
+
+        public CreatingViewModel Contact
+        {
+            get
+            {
+                return new CreatingViewModel(_contactsService);
+            }
+        }
+
         public static void Cleanup()
         {
             // TODO Clear the ViewModels
