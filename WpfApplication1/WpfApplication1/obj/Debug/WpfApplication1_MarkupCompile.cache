@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-D:\Студенты\ИСУ-14-1\Артем Штаба\Kursovik\WpfApplication1\WpfApplication1\obj\Debug\
+D:\Kursovik\WpfApplication1\WpfApplication1\obj\Debug\
 WpfApplication1
 none
 false
 DEBUG;TRACE
-D:\Студенты\ИСУ-14-1\Артем Штаба\Kursovik\WpfApplication1\WpfApplication1\App.xaml
+D:\Kursovik\WpfApplication1\WpfApplication1\App.xaml
 81956288785
 
-192065721628
-71617497832
+171634383106
+68-1556515441
 Resources\Icons.xaml;Styles\ButtonStyle1.xaml;Styles\ButtonStyle2.xaml;Styles\TextblockStyle1.xaml;Styles\TextboxStyle1.xaml;View\Editing.xaml;View\Creating.xaml;View\MainWindow.xaml;
 
 True
