@@ -30,7 +30,7 @@ namespace WpfApplication1.ViewModel
 
         public ViewModelLocator()
         {
-            _contactRepository = new WpfApplication1.ContactsRepository();
+            _contactRepository = new WpfApplication1.ContactsRepository(); // к какому классу относиться этот метод?
             _contactsService = new ContactsService(_contactRepository);
         }
 
